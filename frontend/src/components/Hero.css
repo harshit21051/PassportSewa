@@ -1,0 +1,51 @@
+.hero {
+    background-color: rgb(146, 213, 255);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+a {
+    color: #00b33c;
+}
+
+.hero-content {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2em;
+}
+
+.create-account-btn {
+    background-color: #00b33c;
+    color: white;
+    padding: 15px 30px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.create-account-btn:hover {
+    background-color: #009933;
+}
+
+.helpline {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    background-color: #004080;
+    padding: 3px 80px;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    font-size: 1.2em;
+}

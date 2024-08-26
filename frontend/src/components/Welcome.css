@@ -1,0 +1,82 @@
+.top-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px 40px;
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    color: #005baa;
+    text-align: center;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sub-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.apply-container {
+    background-color: white;
+}
+
+.apply {
+    display: inline;
+    width: 30%;
+    font-weight: bold;
+    margin: 2%;
+    border: 3px solid #004080;
+    background-color: #004080;
+}
+
+.online {
+    background-color: white;
+    color: #004080;
+}
+
+.apply:hover {
+    display: inline;
+    width: 30%;
+    background-color: #002f5f;
+    color: white;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%; /* Adjust the gap between items */
+}
+
+.services {
+    background-color: white;
+    margin: 2%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(48% - 4%); /* Adjust the width of each item */
+    box-sizing: border-box;
+}
+
+.services button {
+    padding: 5px 15px;
+    width: fit-content;
+}
+
+.sub-container h1 {
+    width: 100%; /* Ensures the heading takes the full width */
+}
+
+.details, .logout {
+    width: 20%;
+    margin: 1%;
+    transition: 0.3s;
+}
+
+.logout {
+    background-color: red;
+}
+
+.logout:hover {
+    background-color: rgb(202, 0, 0);
+}

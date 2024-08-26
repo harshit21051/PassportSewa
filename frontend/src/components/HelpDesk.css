@@ -1,0 +1,38 @@
+.help-desk {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.help-desk h2 {
+    margin-bottom: 20px;
+}
+
+.help-item {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px -2px black;
+    background-color: #004080;
+    color: white;
+}
+
+.help-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.help-item p {
+    margin-top: 10px;
+}
+
+.steps .step {
+    display: inline-block;
+    margin: 20px;
+    height: 150px;
+    text-align: center;
+    vertical-align: top;
+    
+}

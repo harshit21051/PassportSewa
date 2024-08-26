@@ -1,0 +1,125 @@
+.pay-method-container {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 50px auto;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pay-method-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.pay-method-container h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.appointment-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.appointment-details, .summary-section {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.summary-section {
+    margin-right: 0;
+}
+
+.appointment-info, .passport-office, .summary-details {
+    margin-bottom: 15px;
+}
+
+.total-amount .amt {
+    color: #1abc9c;
+}
+
+.change-date-button {
+    padding: 5px 10px;
+    color: white;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.change-date-button:hover {
+    background-color: #148871;
+}
+
+.passport-office select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.payment-method-section {
+    margin-top: 20px;
+  }
+  
+.payment-method-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+  
+.payment-option:hover, .payment-option.selected {
+    border-color: #007bff;
+}
+  
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+}
+  
+.payment-option label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.pay-now-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pay-now-button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pay-now-button:hover {
+    background-color: #3498db;
+}

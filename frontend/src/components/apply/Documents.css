@@ -1,0 +1,13 @@
+.docs-meta button {
+    width: 40%;
+}
+
+.docs {
+    display: flex-box;
+    justify-content: flex-end;
+}
+
+.docs button {
+    margin: 1%;
+    width: 48%;
+}

@@ -1,0 +1,128 @@
+.signup-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #005baa;
+    color: white;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button:hover {
+    transition: 0.3s;
+}
+
+.clear-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #d32f2f;
+}
+
+.signup-btn {
+    background-color: #00cf45;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #00b13b;
+}
+
+.passport-type {
+    margin-bottom: 15px;
+}
+
+.passport-type legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    margin: 2%;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 25.5%;
+}
+
+/* .radio-group label {
+} */
+
+.radio-group input {
+    margin-right: 10px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateX(10px) translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal; /* Allows text to wrap */
+    z-index: 1000;
+    width: 300px; /* Increased width */
+}
+
+
+.radio-group:hover .tooltip {
+    display: block;
+}
+
+.radio-group:hover .tooltip {
+    display: block;
+}
+
+.message-container {
+    text-align: center;
+}
+
+.message-container p {
+    font-weight: bold;
+    color: #f68f87;
+}

@@ -1,0 +1,31 @@
+.steps {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.steps .step {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    height: 150px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px -2px black;
+    background-color: #004080;
+    color: white;
+}
+
+.steps .step img {
+    width: 100px;
+    height: 100px;
+}
+
+.steps .step p {
+    margin-top: 10px;
+}
+
+.steps p {
+    width: 200px;
+}
