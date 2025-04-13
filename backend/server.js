@@ -13,8 +13,10 @@ app.use(cors());
 
 // Database connection string
 //const MONGO_URI = 'mongodb+srv://swarnim21567:Swarnim%4045@passportsewa.lv3ev.mongodb.net/?retryWrites=true&w=majority&appName=passportSewa';
-const MONGO_URI = 'mongodb+srv://bharath21362:y6XxGC2vnQNYROM9@cluster101.fgcxxte.mongodb.net/?retryWrites=true&w=majority&appName=Cluster101
-';
+//const MONGO_URI = 'mongodb+srv://bharath21362:y6XxGC2vnQNYROM9@cluster101.fgcxxte.mongodb.net/?retryWrites=true&w=majority&appName=Cluster101
+//';
+require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI;
 
 // Database connection
 mongoose.connect(MONGO_URI, {
