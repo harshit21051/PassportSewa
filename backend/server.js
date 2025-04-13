@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Database connection string
-const MONGO_URI = 'mongodb+srv://swarnim21567:Swarnim%4045@passportsewa.lv3ev.mongodb.net/?retryWrites=true&w=majority&appName=passportSewa';
+//const MONGO_URI = 'mongodb+srv://swarnim21567:Swarnim%4045@passportsewa.lv3ev.mongodb.net/?retryWrites=true&w=majority&appName=passportSewa';
+const MONGO_URI = 'mongodb+srv://bharath21362:<db_password>@cluster101.fgcxxte.mongodb.net/?retryWrites=true&w=majority&appName=Cluster101';
 
 // Database connection
 mongoose.connect(MONGO_URI, {
