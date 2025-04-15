@@ -23,7 +23,6 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 import './App.css';
 
-// ✅ Use backend URL from Render's environment variables (set in dashboard)
 axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
 axios.defaults.withCredentials = true;
 
