@@ -1,18 +1,5 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
-
-// Get the base URL from environment
-const envBaseURL = process.env.REACT_APP_BACKEND_URL;
-
-// Override all hardcoded base URLs starting with http://localhost:5000
-axios.interceptors.request.use((config) => {
-  if (config.url.startsWith('http://localhost:5000')) {
-    const newUrl = config.url.replace('http://localhost:5000', envBaseURL);
-    return { ...config, url: newUrl };
-  }
-  return config;
-});
-
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -36,21 +23,29 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 import './App.css';
 
+// Set up Axios to use dynamic base URL
+const envBaseURL = process.env.REACT_APP_BACKEND_URL;
+
+axios.interceptors.request.use((config) => {
+  if (config.url.startsWith('http://localhost:5000')) {
+    const newUrl = config.url.replace('http://localhost:5000', envBaseURL);
+    return { ...config, url: newUrl };
+  }
+  return config;
+});
+
 function AppRoutes() {
   const { checkUser, isAuthenticated } = useAuth();
 
   useEffect(() => {
-    checkUser(); // Check if user is logged in when the app starts
+    checkUser();
   }, [checkUser]);
 
   return (
     <Routes>
-      {/* Public Routes */}
       <Route path="/" element={!isAuthenticated ? <><Hero /><Steps /><Info /><HelpDesk /><FAQ /></> : <Navigate to="/welcome" replace />} />
       <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/welcome" replace />} />
       <Route path="/signup" element={!isAuthenticated ? <Signup /> : <Navigate to="/welcome" replace />} />
-      
-      {/* Protected Routes */}
       <Route path="/welcome" element={isAuthenticated ? <Welcome /> : <Navigate to="/login" replace />} />
       <Route path="/details" element={isAuthenticated ? <Details /> : <Navigate to="/login" replace />} />
       <Route path="/apply" element={isAuthenticated ? <ApplyOnline /> : <Navigate to="/login" replace />} />
@@ -60,8 +55,6 @@ function AppRoutes() {
       <Route path="/payment" element={isAuthenticated ? <Payment /> : <Navigate to="/login" replace />} />
       <Route path="/payment/method" element={isAuthenticated ? <PayMethod /> : <Navigate to="/login" replace />} />
       <Route path="/payment/success" element={isAuthenticated ? <Successful /> : <Navigate to="/login" replace />} />
-
-      {/* Catch-all Route */}
       <Route path="*" element={<Navigate to={isAuthenticated ? "/welcome" : "/login"} replace />} />
     </Routes>
   );
