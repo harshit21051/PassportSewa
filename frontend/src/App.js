@@ -23,23 +23,15 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 
 import './App.css';
 
-// Set up Axios to use dynamic base URL
-const envBaseURL = process.env.REACT_APP_BACKEND_URL;
-
-axios.interceptors.request.use((config) => {
-  if (config.url.startsWith('http://localhost:5000')) {
-    const newUrl = config.url.replace('http://localhost:5000', envBaseURL);
-    return { ...config, url: newUrl };
-  }
-  return config;
-});
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
 
 function AppRoutes() {
   const { checkUser, isAuthenticated } = useAuth();
 
   useEffect(() => {
     checkUser();
-  }, [checkUser]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Routes>
