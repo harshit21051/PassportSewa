@@ -90,16 +90,16 @@ app.use(cors({
   credentials: true,
 }));
 
-// Connect to MongoDB
+// ✅ Fixed: No semicolon before .then()
 mongoose.connect(MONGO_URI, {
   serverSelectionTimeoutMS: 5000,
   socketTimeoutMS: 45000,
-});
-
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('Error connecting to MongoDB:', err));
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('Error connecting to MongoDB:', err));
 
 // Routes
 app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
