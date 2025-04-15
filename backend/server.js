@@ -33,6 +33,8 @@ app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 */
+//2
+/*
 require('dotenv').config();
 
 const express = require('express');
@@ -50,6 +52,43 @@ const MONGO_URI = process.env.MONGO_URI;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+// Connect to MongoDB
+mongoose.connect(MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000,
+  socketTimeoutMS: 45000,
+})
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('Error connecting to MongoDB:', err));
+
+// Routes
+app.use('/api/auth', authRoutes);
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+*/
+require('dotenv').config();
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const authRoutes = require('./routes/auth');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
+const CLIENT_URL = process.env.CLIENT_URL;
+
+// Middleware
+app.use(bodyParser.json());
+
+const allowedOrigins = [CLIENT_URL];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI, {
