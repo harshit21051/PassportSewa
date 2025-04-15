@@ -1,4 +1,18 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
+
+// Get the base URL from environment
+const envBaseURL = process.env.REACT_APP_BACKEND_URL;
+
+// Override all hardcoded base URLs starting with http://localhost:5000
+axios.interceptors.request.use((config) => {
+  if (config.url.startsWith('http://localhost:5000')) {
+    const newUrl = config.url.replace('http://localhost:5000', envBaseURL);
+    return { ...config, url: newUrl };
+  }
+  return config;
+});
+
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
